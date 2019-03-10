@@ -1,0 +1,14 @@
+{
+  "name": "hivestatistics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Aericio",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "mcpe-ping": "0.0.4",
+    "mysql2": "^1.6.5"
+  }
+}
