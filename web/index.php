@@ -15,6 +15,16 @@
                     title: {
                         text: "HiveMC Player Count"
                     },
+                    axisX: {
+                        title: "ID",
+                        interval: 25,
+                        titleFontColor: "#808080"
+                    },
+                    axisY: {
+                        title: "Players",
+                        interval: 500,
+                        titleFontColor: "#808080"
+                    },
                     data: [
                         {
                             type: "line",
@@ -30,7 +40,7 @@
 <body>
 <div class="main">
     <h1>hivebedrock.network Player Statistics</h1>
-    <p>Updated every minute. Time is saved in GMT-10.</p>
+    <p>Time is saved in GMT-10. Collected roughly 231 minutes.</p>
     <div id="chartContainer" style="height: 300px; width: 50%;"></div>
     <div id="tableContainer">
         <?php
@@ -42,7 +52,7 @@
         }
         $result = $db->query('SELECT * FROM stats');
         if ($result->num_rows > 0) {
-            echo '<table>';
+            echo '<table><tr><td>ID</td><td>TIME GMT-10</td><td>PLAYERS</td></tr>';
             while ($row = $result->fetch_assoc()) {
                 echo '<tr><td>' . $row['id'] . '</td><td>' . $row['time'] . '</td><td>' . $row['players'] . '</td></tr>';
             }
