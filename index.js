@@ -25,7 +25,7 @@ setInterval(function () {
                 const data = [res["currentPlayers"], new Date()];
                 db.query(sql, data, (error, results, fields) => {
                     if (error) return console.error(error.message);
-                    console.log('Rows affected:', results.affectedRows);
+                    console.log(new Date() + '> Rows affected:', results.affectedRows);
                 });
             }
         }
